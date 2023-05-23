@@ -74,7 +74,6 @@ body {
 
 }
 
-
 footer {
 
   background-color: #f2f2f2;
@@ -83,13 +82,7 @@ footer {
 
   text-align: center;
 
-  position: relative;
-
-}
-
-.creator-info {
-
-  position: absolute;
+  position: fixed;
 
   bottom: 0;
 
@@ -97,7 +90,11 @@ footer {
 
   width: 100%;
 
-  background-image: linear-gradient(to right, brown 50%, transparent 50%);
+}
+
+.creator-info {
+
+  position: relative;
 
 }
 
@@ -105,16 +102,30 @@ footer {
 
   font-size: 14px;
 
-  color: white;
+  color: brown;
 
   margin: 0;
 
-  padding: 10px;
-
-  display: inline-block;
-
 }
 
+.creator-info::before {
 
+  content: '';
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 0;
+
+  right: 0;
+
+  height: 1px;
+
+  background-color: brown;
+
+  z-index: -1;
+
+}
 
 
