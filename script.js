@@ -1,10 +1,10 @@
 var images = [
 
-  "image1.jpg",
+  "Không Có Tiêu Đề1_20230523153035.png",
 
-  "image2.jpg",
+  "Passionate_Talk!.png",
 
-  "image3.jpg"
+  "IMG_3437.png"
 
 ];
 
