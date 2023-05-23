@@ -34,33 +34,34 @@ creatorLink.addEventListener("click", function() {
 
 });
 
-// Modal
 
-var modal = document.getElementById("popup-modal");
+// Announcement Modal
 
-var modalLink = document.getElementById("popup-link");
+var announcementModal = document.getElementById("announcement-modal");
 
-var close = document.getElementsByClassName("close")[0];
+var announcementLink = document.getElementById("announcement-link");
 
-modalLink.addEventListener("click", function(event) {
+var closeAnnouncement = document.getElementsByClassName("close")[0];
+
+announcementLink.addEventListener("click", function(event) {
 
   event.preventDefault(); // Prevent the default link behavior
 
-  modal.style.display = "block";
+  announcementModal.style.display = "block";
 
 });
 
-close.addEventListener("click", function() {
+closeAnnouncement.addEventListener("click", function() {
 
-  modal.style.display = "none";
+  announcementModal.style.display = "none";
 
 });
 
 window.addEventListener("click", function(event) {
 
-  if (event.target === modal) {
+  if (event.target === announcementModal) {
 
-    modal.style.display = "none";
+    announcementModal.style.display = "none";
 
   }
 
