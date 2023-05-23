@@ -34,38 +34,36 @@ creatorLink.addEventListener("click", function() {
 
 });
 
-// Popup
+// Modal
 
-var popup = document.getElementById("popup");
+var modal = document.getElementById("popup-modal");
 
-var popupLink = document.getElementById("popup-link");
+var modalLink = document.getElementById("popup-link");
 
-var closePopup = document.getElementsByClassName("close")[0];
+var close = document.getElementsByClassName("close")[0];
 
-popupLink.addEventListener("click", function(event) {
+modalLink.addEventListener("click", function(event) {
 
   event.preventDefault(); // Prevent the default link behavior
 
-  popup.style.display = "block";
+  modal.style.display = "block";
 
 });
 
-closePopup.addEventListener("click", function() {
+close.addEventListener("click", function() {
 
-  popup.style.display = "none";
+  modal.style.display = "none";
 
 });
 
 window.addEventListener("click", function(event) {
 
-  if (event.target == popup) {
+  if (event.target == modal) {
 
-    popup.style.display = "none";
+    modal.style.display = "none";
 
   }
 
 });
 
 // Rest of your existing JavaScript code
-
-
