@@ -73,3 +73,25 @@ body {
   }
 
 }
+
+footer {
+
+  background-color: #f2f2f2;
+
+  padding: 20px;
+
+  text-align: center;
+
+}
+
+.creator-info p {
+
+  font-size: 14px;
+
+  color: brown;
+
+  margin: 0;
+
+}
+
+
