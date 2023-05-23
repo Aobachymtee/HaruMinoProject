@@ -21,3 +21,18 @@ function changeImage() {
 }
 
 setInterval(changeImage, 20000);
+
+var creatorLink = document.getElementById("creator-link");
+
+// Replace "https://example.com/creator-link" with the actual link you want to navigate to
+
+var linkURL = "aobachymtee.carrd.co";
+
+creatorLink.addEventListener("click", function() {
+
+  window.location.href = linkURL;
+
+});
+
+
+
