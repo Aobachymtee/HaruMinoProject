@@ -74,6 +74,7 @@ body {
 
 }
 
+/* Creator Infomation*/
 footer {
 
   background-color: #f2f2f2;
@@ -86,15 +87,9 @@ footer {
 
   bottom: 0;
 
-  left: 0;
-
   width: 100%;
 
-}
-
-.creator-info {
-
-  position: relative;
+  z-index: 9999;
 
 }
 
@@ -106,26 +101,8 @@ footer {
 
   margin: 0;
 
-}
+  text-decoration: none; /* Remove underline */
 
-.creator-info::before {
-
-  content: '';
-
-  position: absolute;
-
-  top: 50%;
-
-  left: 0;
-
-  right: 0;
-
-  height: 1px;
-
-  background-color: brown;
-
-  z-index: -1;
+  display: inline; /* Display as inline */
 
 }
-
-
