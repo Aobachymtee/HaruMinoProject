@@ -26,7 +26,7 @@ var creatorLink = document.getElementById("creator-link");
 
 // Replace "https://example.com/creator-link" with the actual link you want to navigate to
 
-var linkURL = "aobachymtee.carrd.co";
+var linkURL = "https://aobachymtee.carrd.co";
 
 creatorLink.addEventListener("click", function() {
 
