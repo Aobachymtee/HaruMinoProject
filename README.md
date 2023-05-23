@@ -1,2 +1,2 @@
 # HaruMinoProject
-Random HaruMino website using potato coding skill
+Random HaruMino website using my potato coding skill
