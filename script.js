@@ -67,4 +67,27 @@ window.addEventListener("click", function(event) {
 
 });
 
-// Rest of your existing JavaScript code
+// YouTube Player
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("player", {
+    height: "0",
+    width: "0",
+    videoId: "SKbutknpQ_I",
+    playerVars: {
+      autoplay: 1,
+      loop: 1,
+      controls: 0,
+      showinfo: 0,
+      mute: 1,
+      modestbranding: 1
+    },
+    events: {
+      onReady: onPlayerReady
+    }
+  });
+}
+
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
