@@ -90,4 +90,15 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady(event) {
   event.target.playVideo();
+
+  var pauseButton = document.getElementById("pause-button");
+  pauseButton.addEventListener("click", function() {
+    if (event.target.getPlayerState() === 1) {
+      event.target.pauseVideo();
+      pauseButton.textContent = "Play Music";
+    } else {
+      event.target.playVideo();
+      pauseButton.textContent = "Pause Music";
+    }
+  });
 }
