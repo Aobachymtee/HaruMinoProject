@@ -71,7 +71,7 @@ window.addEventListener("click", function(event) {
 var backgroundMusic = document.getElementById("background-music");
 var pauseButton = document.getElementById("pause-button");
 
-backgroundMusic.addEventListener("loadedmetadata", function() {
+document.addEventListener("DOMContentLoaded", function() {
   backgroundMusic.play();
 });
 
