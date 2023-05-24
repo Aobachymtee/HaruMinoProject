@@ -67,13 +67,13 @@ window.addEventListener("click", function(event) {
 
 });
 
-// YouTube Player
+// YouTube Video Player
 var player;
+var videoId = "SKbutknpQ_I"; // Replace with your YouTube video ID
+
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("player", {
-    height: "0",
-    width: "0",
-    videoId: "SKbutknpQ_I",
+    videoId: videoId,
     playerVars: {
       autoplay: 1,
       loop: 1,
@@ -93,21 +93,12 @@ function onPlayerReady(event) {
 
   var pauseButton = document.getElementById("pause-button");
   pauseButton.addEventListener("click", function() {
-    if (event.target.getPlayerState() === 1) {
-      event.target.pauseVideo();
-      pauseButton.textContent = "Play Music";
-    } else {
-      event.target.playVideo();
+    if (event.target.isMuted()) {
+      event.target.unMute();
       pauseButton.textContent = "Pause Music";
+    } else {
+      event.target.mute();
+      pauseButton.textContent = "Play Music";
     }
-  });
-
-  // Keep playing music when navigating away or scrolling
-  window.addEventListener("scroll", function() {
-    player.playVideo();
-  });
-
-  window.addEventListener("beforeunload", function() {
-    player.playVideo();
   });
 }
