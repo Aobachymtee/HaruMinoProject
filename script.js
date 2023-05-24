@@ -101,4 +101,13 @@ function onPlayerReady(event) {
       pauseButton.textContent = "Pause Music";
     }
   });
+
+  // Keep playing music when navigating away or scrolling
+  window.addEventListener("scroll", function() {
+    player.playVideo();
+  });
+
+  window.addEventListener("beforeunload", function() {
+    player.playVideo();
+  });
 }
