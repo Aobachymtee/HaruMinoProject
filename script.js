@@ -71,6 +71,10 @@ window.addEventListener("click", function(event) {
 var backgroundMusic = document.getElementById("background-music");
 var pauseButton = document.getElementById("pause-button");
 
+backgroundMusic.addEventListener("loadedmetadata", function() {
+  backgroundMusic.play();
+});
+
 pauseButton.addEventListener("click", function() {
   if (backgroundMusic.paused) {
     backgroundMusic.play();
