@@ -67,38 +67,16 @@ window.addEventListener("click", function(event) {
 
 });
 
-// YouTube Video Player
-var player;
-var videoId = "SKbutknpQ_I"; // Replace with your YouTube video ID
+// Background Music
+var backgroundMusic = document.getElementById("background-music");
+var pauseButton = document.getElementById("pause-button");
 
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player("player", {
-    videoId: videoId,
-    playerVars: {
-      autoplay: 1,
-      loop: 1,
-      controls: 0,
-      showinfo: 0,
-      mute: 1,
-      modestbranding: 1
-    },
-    events: {
-      onReady: onPlayerReady
-    }
-  });
-}
-
-function onPlayerReady(event) {
-  event.target.playVideo();
-
-  var pauseButton = document.getElementById("pause-button");
-  pauseButton.addEventListener("click", function() {
-    if (event.target.isMuted()) {
-      event.target.unMute();
-      pauseButton.textContent = "Pause Music";
-    } else {
-      event.target.mute();
-      pauseButton.textContent = "Play Music";
-    }
-  });
-}
+pauseButton.addEventListener("click", function() {
+  if (backgroundMusic.paused) {
+    backgroundMusic.play();
+    pauseButton.textContent = "Pause Music";
+  } else {
+    backgroundMusic.pause();
+    pauseButton.textContent = "Play Music";
+  }
+});
